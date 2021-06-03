@@ -1,0 +1,29 @@
+<a routerLink="/adminselectspecialization">Home</a> |
+<a routerLink="/adminlogout">Logout</a>
+<h1>Doctors in the {{specializationName}} Department</h1>
+
+<hr>
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>experience</td>
+        <td>no of operations handled</td>
+        <td>no of operations succeeded</td>
+        <td>success ratio</td>
+        <td>Action</td>
+    </tr>
+    <tr *ngFor="let doctor of doctors">
+        <td>{{doctor. doctorId}}</td>
+        <td>{{doctor.doctorName}}</td>
+        <td>{{doctor.experience}}</td>
+        <td>{{doctor.noOfOperationsTaken}}</td>
+        <td>{{doctor.operationsSuccess}}</td>
+        <td>{{doctor.successRatio}}</td>
+        <td><button class="btn btn-primary" (click)="updatedoctor(doctor)">Update</button>
+            <button class="btn btn-danger" (click)="deletedoctor(doctor)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<button class="btn btn-primary" (click)="adddoctor()">Add Doctor</button>

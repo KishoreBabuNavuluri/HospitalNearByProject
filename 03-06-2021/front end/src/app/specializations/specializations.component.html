@@ -1,0 +1,14 @@
+<a routerLink="/specialization">Home</a> |
+<a routerLink="/bookedappointments">Your Appointments</a> |
+<a routerLink="/logout">Logout</a>
+
+<div class="group">
+    <div *ngFor="let s of spec">
+        <figure>
+            <a (click)="getDoctors(s)" role="button">
+                <img alt="{{s.splName}}" src="assets/images/{{s.splName}}.png" height="100">
+            </a>
+            <figcaption>{{s.splName}} </figcaption>
+        </figure>
+    </div>
+</div>

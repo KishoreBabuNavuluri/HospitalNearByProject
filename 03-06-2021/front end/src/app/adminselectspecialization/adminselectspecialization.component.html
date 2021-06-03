@@ -1,0 +1,25 @@
+<a routerLink="/adminselectspecialization">Home</a>
+|
+<a routerLink="/adminlogout">Logout</a>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form [formGroup]="specializationForm" (ngSubmit)="onSubmit()">
+                <fieldset>
+                    <h2>Select Specialization</h2>
+                    <div class="form-group">
+                        <label for="specialization">Specialization</label>
+                        <select name="specialization" id="specialization" formControlName="specialization">
+                        <option value="{{spec.splName}}" *ngFor="let spec of specializations">{{spec.splName}}</option>
+                    </select>
+                        <!-- <input type="text" id="name" class="form-control" formControlName="name" required/> -->
+                        <!-- <span class="errors" *ngIf="!specializationForm.get('name').valid && specializationForm.get('name').touched">Enter a Valid name</span> -->
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-success" [disabled]="!specializationForm.valid">Submit</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</div>

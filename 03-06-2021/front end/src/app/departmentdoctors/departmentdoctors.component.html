@@ -1,0 +1,27 @@
+<a routerLink="/specialization">Home</a> |
+<a routerLink="/bookedappointments">Your Appointments</a> |
+<a routerLink="/logout">Logout</a>
+
+
+<div class="container" *ngIf="isPresent; else notThere">
+    <!-- <p>departmentdoctors works!</p> -->
+    <h1>The doctors in the {{spec}} Department</h1>
+    <table class='table table-striped'>
+
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Action</td>
+        </tr>
+        <tr *ngFor="let doctor of doctors">
+            <td>{{doctor.doctorId}}</td>
+            <td>{{doctor.doctorName}}</td>
+            <td><button class="btn btn-success" (click)="viewEmployee(doctor)">View</button>
+            </td>
+        </tr>
+    </table>
+</div>
+<div>
+    <ng-template #notThere>No Doctors in the department</ng-template>
+
+</div>
