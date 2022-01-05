@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('HospitalNearBy app is running!');
+    expect(await page.getTitleText()).toEqual('AngularForms app is running!');
   });
 
   afterEach(async () => {

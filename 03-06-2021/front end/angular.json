@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HospitalNearBy": {
+    "AngularForms": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/HospitalNearBy",
+            "outputPath": "dist/AngularForms",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -28,8 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -66,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "HospitalNearBy:build"
+            "browserTarget": "AngularForms:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "HospitalNearBy:build:production"
+              "browserTarget": "AngularForms:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "HospitalNearBy:build"
+            "browserTarget": "AngularForms:build"
           }
         },
         "test": {
@@ -114,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "HospitalNearBy:serve"
+            "devServerTarget": "AngularForms:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "HospitalNearBy:serve:production"
+              "devServerTarget": "AngularForms:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "HospitalNearBy"
+  "defaultProject": "AngularForms"
 }

@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "id": 908166,
+      "password": "harsha",
+      "name": "harsha",
+      "age": 22,
+      "address": "MTM",
+      "company": "CTS"
+    },
+    {
+      "id": 908169,
+      "password": "kishore",
+      "name": "Kishore",
+      "age": 21,
+      "address": "Vijayawada",
+      "company": "CTS"
+    },
+    {
+      "id": 908168,
+      "password": "sai",
+      "name": "Sai",
+      "age": 22,
+      "address": "MTM",
+      "company": "CTS"
+    },
+    {
+      "id": "908170",
+      "password": "kishore",
+      "name": "kissu",
+      "address": "H.no:1-21",
+      "age": "21",
+      "company": "cts"
+    }
+  ]
+}
